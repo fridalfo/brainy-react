@@ -1,0 +1,53 @@
+@media (min-width: 800px) {
+    .home {
+        background-size: cover;
+        background-attachment: fixed;
+        .hero-txt {
+          .hero-title {
+            font-size: 50px;
+          }
+          .hero-caption{
+            border: solid 5px #847DE3;
+            padding: 22px 40px 18px 40px;
+            .node{
+              border-radius: 5px;
+              border: solid 6px #847DE3;
+              width: 20px;
+              height: 20px;
+              position: absolute;
+              &:nth-child(1){
+                top : -10px;
+                left : -10px;
+              }
+              &:nth-child(2){
+                top : -10px;
+                left : calc(50% - 10px);
+              }
+              &:nth-child(3){
+                top : -10px;
+                left : calc(100% - 10px);
+              }
+              &:nth-child(4){
+                top : calc(100% - 10px);
+                left : -10px;
+              }
+              &:nth-child(5){
+                top : calc(100% - 10px);
+                left : calc(50% - 10px);
+              }
+              &:nth-child(6){
+                top : calc(100% - 10px);
+                left : calc(100% - 10px);
+              }
+            }
+    
+            span{
+              font-size: 50px;
+            }
+            .cursor {
+              line-height:50px;
+            }
+          }
+        }
+    }
+}
