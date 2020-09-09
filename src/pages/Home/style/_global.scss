@@ -1,5 +1,4 @@
 .home {
-	background-image: url(/images/background-home.jpg);
 	background-position: top center;
 	background-attachment: scroll;
 	background-repeat: no-repeat;
@@ -197,3 +196,93 @@
 		margin-right: auto;
 	}
 }
+
+.our-client{
+
+	display : flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.card{
+	  box-shadow: none;
+	  width : 100%;
+	  .isian{
+		padding : 0px 20px;
+		.title{
+		  display: block;
+		  font-size: 20px;
+		  font-weight: 600;
+		  text-align: center;
+		  margin-top : 30px;
+		  margin-bottom: 30px;
+		}
+		.client-list{
+		  div{
+			padding : 0 5px;
+			flex : 1;
+		  }
+		  img{
+			width: 100%;
+			height: auto;
+			filter: grayscale(100%);
+			cursor: pointer;
+  
+			&:hover{
+			  filter: none;
+			}
+		  }
+		}
+	  }
+	}
+  }
+
+//   About
+.about-section {
+	padding: 50px 0 0;
+	margin-bottom: 8rem;
+	.ilustrasi-grow{
+	  display: none;
+	}
+  
+	.about-title{
+	  font-size: 40px;
+	  font-weight: 800;
+	  margin-bottom: 25px;
+	}
+	.about-text{
+	  font-size : 22px;
+	  line-height: 35px;
+	  color : #262939;
+  
+	}
+	.service-title{
+	  text-align: center;
+	  font-weight: 700;
+	}
+  
+	.row-service{
+	  .col-md-4{
+		margin-top : 30px;
+	  }
+	}
+  
+	.item-service{
+	  padding: 30px 20px;
+	  height : 150px;
+	  display : flex;
+	  flex-direction: column;
+	  align-items: center;
+	  justify-content: center;
+	  img{
+		width: 40px;
+		height: 60px;
+		object-fit: contain;
+		margin-bottom: 10px;
+	  }
+	  span{
+		font-size: 15px;
+		font-weight: 600 ;
+		text-align: center;
+	  }
+	}
+  }

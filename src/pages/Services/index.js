@@ -1,11 +1,10 @@
 import React from 'react';
+import PageTemplate from '../../component/Template/PageTemplate';
 
-export default class ServicesPage extends React.Component{
-    render() {
-        return (
-            <div>
-                <h1>Ini Services</h1>
-            </div>
-        )
-    }
+export default function ServicesPage(){
+    return(
+        <PageTemplate>
+            <h1>Services</h1>
+        </PageTemplate>
+    )
 }

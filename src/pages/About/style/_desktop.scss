@@ -1,0 +1,17 @@
+@media (min-width:800px){
+    .about{
+		position :relative;
+		.about-image{
+			&-desktop{
+				display: block;	
+			}
+			&-mobile{
+				display: none;
+			}
+			&-splatter{
+				position: absolute;
+				right : 10em;
+			}
+		}
+	}
+}

@@ -50,4 +50,42 @@
           }
         }
     }
+
+  .our-client{
+    position: absolute;
+    transform: translateY(-50%);
+    top : 100vh;
+    width : 100%;
+    .card{
+      box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+      border-color: transparent !important;
+      width : 80%;
+      border-radius: 20px;
+      .isian{
+        .client-list{
+          div{
+            padding : 0 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .about-section {
+    padding: 200px 0 0;
+    .ilustrasi-grow{
+      display: inline;
+    }
+    .item-service{
+      flex-direction: row;
+      img{
+        width: initial;
+      }
+      span{
+        font-size: 20;
+		    margin-left: 25px;
+      }
+    }
+  }
+
 }

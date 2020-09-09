@@ -1,0 +1,27 @@
+@import '../../style/colors.scss';
+
+footer.site-footer {
+    display : flex;
+    flex-direction: "row";
+	background-color: $color-darkShade;
+	padding: 20px 0;
+	color: #fff;
+	font-size: 13px;
+	text-align: center;
+	a {
+        color: #fff;
+        text-decoration: none;
+		&:hover {
+			color: $color-primary;
+		}
+  }
+  .float-right{
+    float: right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .float-left{
+    float: left;
+  }
+}

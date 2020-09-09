@@ -1,9 +1,12 @@
 import React from 'react';
+import PageTemplate from '../../component/Template/PageTemplate';
 
-class ContactPage extends React.Component{
-    render(){
-        return <h1>Contact</h1>
-    }
+function ContactPage(){
+    return (
+        <PageTemplate>
+            <h1>Contact Page</h1>
+        </PageTemplate>
+    )
 }
 
 export default ContactPage;

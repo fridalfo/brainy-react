@@ -1,23 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState} from 'react';
 
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import "./header.scss"
 import route from '../../pages/route'
 
-export default class Header extends React.Component{
-    render(){
-        return <header className="br-navbar">
+export default function Header(){
+
+    const [mini, setMini] = useState(false);
+
+    useEffect(()=>{
+        function onScroll(ev){
+            const pageOffset = window.pageYOffset;
+            setMini(pageOffset > 100);
+        }
+        window.onscroll = onScroll;
+    },[])
+
+    return (
+        <header className={"br-navbar " + (mini ? "br-navbar-mini" : "") }>
             <nav className="navbar navbar-expand-lg fixed-top">
-                <div className="container">
-                    <NavLink className="navbar-brand" to="/"><img src="images/logo.png" alt="" className="img-responsive"/></NavLink>
-                    <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <div className="container-fluid">
+                    <Link className="navbar-brand" to="/"><img src="images/logo.png" alt=""/></Link>
+                    <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarBrainy" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="sr-only">Toggle navigation</span>
                         <span className="icon-bar"></span>
                         <span className="icon-bar"></span>
                         <span className="icon-bar"></span>
                     </button>
 
-                    <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <div className="collapse navbar-collapse" id="navbarBrainy">
                         <ul className="navbar-nav ml-auto">
                             {
                                 route.map(x=> <li key={x.name}  className="nav-item">
@@ -29,5 +40,5 @@ export default class Header extends React.Component{
                 </div>
             </nav>
         </header>
-    }
+    )
 }
